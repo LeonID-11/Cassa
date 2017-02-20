@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
+
+<head>
+
+	<meta charset="utf-8">
+
+	<!-- Bootstrap Grid Styles -->
+	<style>html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}input,button,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}a:hover,a:focus{color:#23527c;text-decoration:underline}a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}figure{margin:0}img{vertical-align:middle}.img-responsive{display:block;max-width:100%;height:auto}.img-rounded{border-radius:6px}.img-thumbnail{padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}.img-circle{border-radius:50%}hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}[role="button"]{cursor:pointer}.container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}.row{margin-left:-15px;margin-right:-15px}.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px}.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12{float:left}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}.col-xs-pull-12{right:100%}.col-xs-pull-11{right:91.66666667%}.col-xs-pull-10{right:83.33333333%}.col-xs-pull-9{right:75%}.col-xs-pull-8{right:66.66666667%}.col-xs-pull-7{right:58.33333333%}.col-xs-pull-6{right:50%}.col-xs-pull-5{right:41.66666667%}.col-xs-pull-4{right:33.33333333%}.col-xs-pull-3{right:25%}.col-xs-pull-2{right:16.66666667%}.col-xs-pull-1{right:8.33333333%}.col-xs-pull-0{right:auto}.col-xs-push-12{left:100%}.col-xs-push-11{left:91.66666667%}.col-xs-push-10{left:83.33333333%}.col-xs-push-9{left:75%}.col-xs-push-8{left:66.66666667%}.col-xs-push-7{left:58.33333333%}.col-xs-push-6{left:50%}.col-xs-push-5{left:41.66666667%}.col-xs-push-4{left:33.33333333%}.col-xs-push-3{left:25%}.col-xs-push-2{left:16.66666667%}.col-xs-push-1{left:8.33333333%}.col-xs-push-0{left:auto}.col-xs-offset-12{margin-left:100%}.col-xs-offset-11{margin-left:91.66666667%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-0{margin-left:0}@media (min-width:768px){.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{float:left}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}.col-sm-pull-12{right:100%}.col-sm-pull-11{right:91.66666667%}.col-sm-pull-10{right:83.33333333%}.col-sm-pull-9{right:75%}.col-sm-pull-8{right:66.66666667%}.col-sm-pull-7{right:58.33333333%}.col-sm-pull-6{right:50%}.col-sm-pull-5{right:41.66666667%}.col-sm-pull-4{right:33.33333333%}.col-sm-pull-3{right:25%}.col-sm-pull-2{right:16.66666667%}.col-sm-pull-1{right:8.33333333%}.col-sm-pull-0{right:auto}.col-sm-push-12{left:100%}.col-sm-push-11{left:91.66666667%}.col-sm-push-10{left:83.33333333%}.col-sm-push-9{left:75%}.col-sm-push-8{left:66.66666667%}.col-sm-push-7{left:58.33333333%}.col-sm-push-6{left:50%}.col-sm-push-5{left:41.66666667%}.col-sm-push-4{left:33.33333333%}.col-sm-push-3{left:25%}.col-sm-push-2{left:16.66666667%}.col-sm-push-1{left:8.33333333%}.col-sm-push-0{left:auto}.col-sm-offset-12{margin-left:100%}.col-sm-offset-11{margin-left:91.66666667%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-0{margin-left:0}}@media (min-width:992px){.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{float:left}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}.col-md-pull-12{right:100%}.col-md-pull-11{right:91.66666667%}.col-md-pull-10{right:83.33333333%}.col-md-pull-9{right:75%}.col-md-pull-8{right:66.66666667%}.col-md-pull-7{right:58.33333333%}.col-md-pull-6{right:50%}.col-md-pull-5{right:41.66666667%}.col-md-pull-4{right:33.33333333%}.col-md-pull-3{right:25%}.col-md-pull-2{right:16.66666667%}.col-md-pull-1{right:8.33333333%}.col-md-pull-0{right:auto}.col-md-push-12{left:100%}.col-md-push-11{left:91.66666667%}.col-md-push-10{left:83.33333333%}.col-md-push-9{left:75%}.col-md-push-8{left:66.66666667%}.col-md-push-7{left:58.33333333%}.col-md-push-6{left:50%}.col-md-push-5{left:41.66666667%}.col-md-push-4{left:33.33333333%}.col-md-push-3{left:25%}.col-md-push-2{left:16.66666667%}.col-md-push-1{left:8.33333333%}.col-md-push-0{left:auto}.col-md-offset-12{margin-left:100%}.col-md-offset-11{margin-left:91.66666667%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-9{margin-left:75%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-6{margin-left:50%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-3{margin-left:25%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-0{margin-left:0}}@media (min-width:1200px){.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{float:left}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}.col-lg-pull-12{right:100%}.col-lg-pull-11{right:91.66666667%}.col-lg-pull-10{right:83.33333333%}.col-lg-pull-9{right:75%}.col-lg-pull-8{right:66.66666667%}.col-lg-pull-7{right:58.33333333%}.col-lg-pull-6{right:50%}.col-lg-pull-5{right:41.66666667%}.col-lg-pull-4{right:33.33333333%}.col-lg-pull-3{right:25%}.col-lg-pull-2{right:16.66666667%}.col-lg-pull-1{right:8.33333333%}.col-lg-pull-0{right:auto}.col-lg-push-12{left:100%}.col-lg-push-11{left:91.66666667%}.col-lg-push-10{left:83.33333333%}.col-lg-push-9{left:75%}.col-lg-push-8{left:66.66666667%}.col-lg-push-7{left:58.33333333%}.col-lg-push-6{left:50%}.col-lg-push-5{left:41.66666667%}.col-lg-push-4{left:33.33333333%}.col-lg-push-3{left:25%}.col-lg-push-2{left:16.66666667%}.col-lg-push-1{left:8.33333333%}.col-lg-push-0{left:auto}.col-lg-offset-12{margin-left:100%}.col-lg-offset-11{margin-left:91.66666667%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-0{margin-left:0}}.clearfix:before,.clearfix:after,.container:before,.container:after,.container-fluid:before,.container-fluid:after,.row:before,.row:after{content:" ";display:table}.clearfix:after,.container:after,.container-fluid:after,.row:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right !important}.pull-left{float:left !important}.hide{display:none !important}.show{display:block !important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none !important}.affix{position:fixed}@-ms-viewport{width:device-width}.visible-xs,.visible-sm,.visible-md,.visible-lg{display:none !important}.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block{display:none !important}@media (max-width:767px){.visible-xs{display:block !important}table.visible-xs{display:table}tr.visible-xs{display:table-row !important}th.visible-xs,td.visible-xs{display:table-cell !important}}@media (max-width:767px){.visible-xs-block{display:block !important}}@media (max-width:767px){.visible-xs-inline{display:inline !important}}@media (max-width:767px){.visible-xs-inline-block{display:inline-block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm{display:block !important}table.visible-sm{display:table}tr.visible-sm{display:table-row !important}th.visible-sm,td.visible-sm{display:table-cell !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-block{display:block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline{display:inline !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline-block{display:inline-block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md{display:block !important}table.visible-md{display:table}tr.visible-md{display:table-row !important}th.visible-md,td.visible-md{display:table-cell !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-block{display:block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline{display:inline !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline-block{display:inline-block !important}}@media (min-width:1200px){.visible-lg{display:block !important}table.visible-lg{display:table}tr.visible-lg{display:table-row !important}th.visible-lg,td.visible-lg{display:table-cell !important}}@media (min-width:1200px){.visible-lg-block{display:block !important}}@media (min-width:1200px){.visible-lg-inline{display:inline !important}}@media (min-width:1200px){.visible-lg-inline-block{display:inline-block !important}}@media (max-width:767px){.hidden-xs{display:none !important}}@media (min-width:768px) and (max-width:991px){.hidden-sm{display:none !important}}@media (min-width:992px) and (max-width:1199px){.hidden-md{display:none !important}}@media (min-width:1200px){.hidden-lg{display:none !important}}.visible-print{display:none !important}@media print{.visible-print{display:block !important}table.visible-print{display:table}tr.visible-print{display:table-row !important}th.visible-print,td.visible-print{display:table-cell !important}}.visible-print-block{display:none !important}@media print{.visible-print-block{display:block !important}}.visible-print-inline{display:none !important}@media print{.visible-print-inline{display:inline !important}}.visible-print-inline-block{display:none !important}@media print{.visible-print-inline-block{display:inline-block !important}}@media print{.hidden-print{display:none !important}}</style>
+	
+	<!-- Load CSS Compilled without JS -->
+	<noscript>
+		<link rel="stylesheet" href="_main.min.css">
+		<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+	</noscript>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+</head>
+
+<body>
+	<header class="head">
+		<div class="container">		
+			<div class="row">
+				<div class="col-md-12">
+					<h1 class="cassa">Cassa</h1>
+					<img class="desk" src="img/desk.png" alt="desk">
+				</div>
+				<div class="col-md-3">
+					<div class="product-wrap">
+						<div class="product-bg"><div class="product-bg-grad"></div></div>
+						<h4>PINEAPPLE</h4>
+						<img src="img/PINEAPPLE.png" alt="PINEAPPLE">
+						<p class="sale-text">OFFERTA LIMITATA -50%</p>
+						<p class="sale">&#36;8.50<sup>19.00&#36;</sup></p>
+						<ul id="quantity" >
+							<li class="list" >
+								<a href="#slide" class="link-popap">3<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+								<ul class="spoiler" >
+									<li><a href="#slide">1</a></li>
+									<li><a href="#slide">2</a></li>
+									<li><a href="#slide">3</a></li>
+									<li><a href="#slide">4</a></li>
+									<li><a href="#slide">5</a></li>
+									<li><a href="#slide">6</a></li>
+									<li><a href="#slide">7</a></li>
+									<li><a href="#slide">8</a></li>
+									<li><a href="#slide">9</a></li>
+									<li><a href="#slide">10</a></li>
+									<li><a href="#slide">11</a></li>
+									<li><a href="#slide">12</a></li>
+									<li><a href="#slide">13</a></li>
+									<li><a href="#slide">14</a></li>
+									<li><a href="#slide">15</a></li>
+									<li><a href="#slide">16</a></li>
+									<li><a href="#slide">17</a></li>
+									<li><a href="#slide">18</a></li>
+									<li><a href="#slide">19</a></li>
+									<li><a href="#slide">20</a></li>
+									<li><a href="#slide">21</a></li>
+									<li><a href="#slide">22</a></li>
+									<li><a href="#slide">23</a></li>
+									<li><a href="#slide">24</a></li>
+									<li><a href="#slide">25</a></li>
+									<li><a href="#slide">26</a></li>
+									<li><a href="#slide">27</a></li>
+									<li><a href="#slide">28</a></li>
+									<li><a href="#slide">29</a></li>
+									<li><a href="#slide">30</a></li>
+									<li><a href="#slide">31</a></li>
+									<li><a href="#slide">32</a></li>
+									<li><a href="#slide">33</a></li>
+									<li><a href="#slide">34</a></li>
+									<li><a href="#slide">35</a></li>
+									<li><a href="#slide">36</a></li>
+									<li><a href="#slide">37</a></li>
+									<li><a href="#slide">38</a></li>
+									<li><a href="#slide">39</a></li>
+									<li><a href="#slide">40</a></li>
+									<li><a href="#slide">41</a></li>
+									<li><a href="#slide">42</a></li>
+									<li><a href="#slide">43</a></li>
+									<li><a href="#slide">44</a></li>
+									<li><a href="#slide">45</a></li>
+									<li><a href="#slide">46</a></li>
+									<li><a href="#slide">47</a></li>
+									<li><a href="#slide">48</a></li>
+									<li><a href="#slide">49</a></li>
+									<li><a href="#slide">50</a></li>
+								</ul>
+							</li>
+							<li class="link">
+								<a href="#popap" class="link-click">
+									<svg width="50px" height="50px" viewBox="0 0 744.09448819 1052.3622047" id="svg2" version="1.1">
+										<path d="m 234.38651,823.33344 c -20.56378,-5.15484 -37.95364,-21.74679 -45.34273,-43.26204 -5.37741,-15.65795 -5.29637,-33.87467 0.21929,-49.26655 16.7466,-46.73333 70.72997,-59.26975 102.85042,-23.88473 24.66501,27.17176 24.94766,70.17092 0.63584,96.73464 -12.51004,13.66883 -25.67352,20.09739 -42.54023,20.77514 -6.15686,0.24741 -12.10627,-0.16487 -15.82259,-1.09646 z m 315.63126,0 C 529.454,818.1786 512.06414,801.58665 504.67505,780.0714 c -5.37741,-15.65795 -5.29637,-33.87467 0.21921,-49.26655 16.74669,-46.73333 70.73005,-59.26975 102.8505,-23.88473 24.66501,27.17176 24.94765,70.17092 0.63584,96.73464 -12.51012,13.66883 -25.67353,20.09739 -42.54023,20.77514 -6.15686,0.24741 -12.10627,-0.16487 -15.8226,-1.09646 z M 234.42415,650.29732 c -39.56312,-9.49658 -60.99535,-57.38814 -43.53921,-97.29067 1.82821,-4.17902 12.49458,-25.7966 23.70304,-48.03906 l 20.37905,-40.44085 -56.63096,-130.9022 -56.63103,-130.9022 -31.671944,-0.28523 -31.672019,-0.28524 0,-34.57794 0,-34.57795 51.548033,0 51.54795,0 14.8413,34.32267 14.84121,34.32266 237.65244,0.54051 237.65243,0.54052 4.93174,2.67677 c 14.14912,7.67967 21.42008,25.67309 16.6101,41.10489 -1.72288,5.52743 -106.82667,216.12576 -116.28495,233.00225 -7.97324,14.22664 -20.48723,25.3096 -34.46844,30.52681 l -7.89078,2.94451 -123.45333,0.29452 -123.45325,0.29452 -14.38884,28.66447 c -15.71828,31.31311 -16.57885,34.10372 -11.78986,38.23232 l 2.59891,2.24052 183.82081,0 183.82081,0 0,34.59292 0,34.59292 -193.07756,-0.086 c -155.59478,-0.0693 -194.22647,-0.36172 -198.99565,-1.5065 z" id="path3371" inkscape:connector-curvature="0" />
+									</svg>
+								</a>
+							</li>
+						</ul>
+						
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="product-wrap">
+						<div class="product-bg"><div class="product-bg-grad"></div></div>
+						<h4>berries</h4>
+							<img src="img/berries.png" alt="berries">
+							<p class="sale-text">OFFERTA LIMITATA -50%</p>
+							<p class="sale">&#36;8.50<sup>19.00&#36;</sup></p>
+							<ul id="quantity" >
+								<li class="list">
+									<a href="#slide" class="link-popap">3<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+									<ul class="spoiler">
+										<li><a href="#slide">1</a></li>
+										<li><a href="#slide">2</a></li>
+										<li><a href="#slide">3</a></li>
+										<li><a href="#slide">4</a></li>
+										<li><a href="#slide">5</a></li>
+										<li><a href="#slide">6</a></li>
+										<li><a href="#slide">7</a></li>
+										<li><a href="#slide">8</a></li>
+										<li><a href="#slide">9</a></li>
+										<li><a href="#slide">10</a></li>
+										<li><a href="#slide">11</a></li>
+										<li><a href="#slide">12</a></li>
+										<li><a href="#slide">13</a></li>
+										<li><a href="#slide">14</a></li>
+										<li><a href="#slide">15</a></li>
+										<li><a href="#slide">16</a></li>
+										<li><a href="#slide">17</a></li>
+										<li><a href="#slide">18</a></li>
+										<li><a href="#slide">19</a></li>
+										<li><a href="#slide">20</a></li>
+										<li><a href="#slide">21</a></li>
+										<li><a href="#slide">22</a></li>
+										<li><a href="#slide">23</a></li>
+										<li><a href="#slide">24</a></li>
+										<li><a href="#slide">25</a></li>
+										<li><a href="#slide">26</a></li>
+										<li><a href="#slide">27</a></li>
+										<li><a href="#slide">28</a></li>
+										<li><a href="#slide">29</a></li>
+										<li><a href="#slide">30</a></li>
+										<li><a href="#slide">31</a></li>
+										<li><a href="#slide">32</a></li>
+										<li><a href="#slide">33</a></li>
+										<li><a href="#slide">34</a></li>
+										<li><a href="#slide">35</a></li>
+										<li><a href="#slide">36</a></li>
+										<li><a href="#slide">37</a></li>
+										<li><a href="#slide">38</a></li>
+										<li><a href="#slide">39</a></li>
+										<li><a href="#slide">40</a></li>
+										<li><a href="#slide">41</a></li>
+										<li><a href="#slide">42</a></li>
+										<li><a href="#slide">43</a></li>
+										<li><a href="#slide">44</a></li>
+										<li><a href="#slide">45</a></li>
+										<li><a href="#slide">46</a></li>
+										<li><a href="#slide">47</a></li>
+										<li><a href="#slide">48</a></li>
+										<li><a href="#slide">49</a></li>
+										<li><a href="#slide">50</a></li>
+									</ul>
+								</li>
+								<li class="link">
+									<a href="#popap" class="link-click">
+										<svg width="50px" height="50px" viewBox="0 0 744.09448819 1052.3622047" id="svg2" version="1.1">
+											<path d="m 234.38651,823.33344 c -20.56378,-5.15484 -37.95364,-21.74679 -45.34273,-43.26204 -5.37741,-15.65795 -5.29637,-33.87467 0.21929,-49.26655 16.7466,-46.73333 70.72997,-59.26975 102.85042,-23.88473 24.66501,27.17176 24.94766,70.17092 0.63584,96.73464 -12.51004,13.66883 -25.67352,20.09739 -42.54023,20.77514 -6.15686,0.24741 -12.10627,-0.16487 -15.82259,-1.09646 z m 315.63126,0 C 529.454,818.1786 512.06414,801.58665 504.67505,780.0714 c -5.37741,-15.65795 -5.29637,-33.87467 0.21921,-49.26655 16.74669,-46.73333 70.73005,-59.26975 102.8505,-23.88473 24.66501,27.17176 24.94765,70.17092 0.63584,96.73464 -12.51012,13.66883 -25.67353,20.09739 -42.54023,20.77514 -6.15686,0.24741 -12.10627,-0.16487 -15.8226,-1.09646 z M 234.42415,650.29732 c -39.56312,-9.49658 -60.99535,-57.38814 -43.53921,-97.29067 1.82821,-4.17902 12.49458,-25.7966 23.70304,-48.03906 l 20.37905,-40.44085 -56.63096,-130.9022 -56.63103,-130.9022 -31.671944,-0.28523 -31.672019,-0.28524 0,-34.57794 0,-34.57795 51.548033,0 51.54795,0 14.8413,34.32267 14.84121,34.32266 237.65244,0.54051 237.65243,0.54052 4.93174,2.67677 c 14.14912,7.67967 21.42008,25.67309 16.6101,41.10489 -1.72288,5.52743 -106.82667,216.12576 -116.28495,233.00225 -7.97324,14.22664 -20.48723,25.3096 -34.46844,30.52681 l -7.89078,2.94451 -123.45333,0.29452 -123.45325,0.29452 -14.38884,28.66447 c -15.71828,31.31311 -16.57885,34.10372 -11.78986,38.23232 l 2.59891,2.24052 183.82081,0 183.82081,0 0,34.59292 0,34.59292 -193.07756,-0.086 c -155.59478,-0.0693 -194.22647,-0.36172 -198.99565,-1.5065 z" id="path3371" inkscape:connector-curvature="0" />
+										</svg>
+									</a>
+								</li>
+							</ul>
+							
+					</div>
+					
+				</div>
+				<div class="col-md-3">
+					<div class="product-wrap">
+						<div class="product-bg"><div class="product-bg-grad"></div></div>
+						<h4>grapefruit</h4>
+							<img src="img/grapefruit.png" alt="grapefruit">
+							<p class="sale-text">OFFERTA LIMITATA -50%</p>
+							<p class="sale">&#36;8.50<sup>19.00&#36;</sup></p>
+							<ul id="quantity" >
+								<li class="list">
+									<a href="#slide" class="link-popap">3<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+									<ul class="spoiler">
+										<li><a href="#slide">1</a></li>
+										<li><a href="#slide">2</a></li>
+										<li><a href="#slide">3</a></li>
+										<li><a href="#slide">4</a></li>
+										<li><a href="#slide">5</a></li>
+										<li><a href="#slide">6</a></li>
+										<li><a href="#slide">7</a></li>
+										<li><a href="#slide">8</a></li>
+										<li><a href="#slide">9</a></li>
+										<li><a href="#slide">10</a></li>
+										<li><a href="#slide">11</a></li>
+										<li><a href="#slide">12</a></li>
+										<li><a href="#slide">13</a></li>
+										<li><a href="#slide">14</a></li>
+										<li><a href="#slide">15</a></li>
+										<li><a href="#slide">16</a></li>
+										<li><a href="#slide">17</a></li>
+										<li><a href="#slide">18</a></li>
+										<li><a href="#slide">19</a></li>
+										<li><a href="#slide">20</a></li>
+										<li><a href="#slide">21</a></li>
+										<li><a href="#slide">22</a></li>
+										<li><a href="#slide">23</a></li>
+										<li><a href="#slide">24</a></li>
+										<li><a href="#slide">25</a></li>
+										<li><a href="#slide">26</a></li>
+										<li><a href="#slide">27</a></li>
+										<li><a href="#slide">28</a></li>
+										<li><a href="#slide">29</a></li>
+										<li><a href="#slide">30</a></li>
+										<li><a href="#slide">31</a></li>
+										<li><a href="#slide">32</a></li>
+										<li><a href="#slide">33</a></li>
+										<li><a href="#slide">34</a></li>
+										<li><a href="#slide">35</a></li>
+										<li><a href="#slide">36</a></li>
+										<li><a href="#slide">37</a></li>
+										<li><a href="#slide">38</a></li>
+										<li><a href="#slide">39</a></li>
+										<li><a href="#slide">40</a></li>
+										<li><a href="#slide">41</a></li>
+										<li><a href="#slide">42</a></li>
+										<li><a href="#slide">43</a></li>
+										<li><a href="#slide">44</a></li>
+										<li><a href="#slide">45</a></li>
+										<li><a href="#slide">46</a></li>
+										<li><a href="#slide">47</a></li>
+										<li><a href="#slide">48</a></li>
+										<li><a href="#slide">49</a></li>
+										<li><a href="#slide">50</a></li>
+									</ul>
+								</li>
+								<li class="link">
+									<a href="#popap" class="link-click">
+										<svg width="50px" height="50px" viewBox="0 0 744.09448819 1052.3622047" id="svg2" version="1.1">
+											<path d="m 234.38651,823.33344 c -20.56378,-5.15484 -37.95364,-21.74679 -45.34273,-43.26204 -5.37741,-15.65795 -5.29637,-33.87467 0.21929,-49.26655 16.7466,-46.73333 70.72997,-59.26975 102.85042,-23.88473 24.66501,27.17176 24.94766,70.17092 0.63584,96.73464 -12.51004,13.66883 -25.67352,20.09739 -42.54023,20.77514 -6.15686,0.24741 -12.10627,-0.16487 -15.82259,-1.09646 z m 315.63126,0 C 529.454,818.1786 512.06414,801.58665 504.67505,780.0714 c -5.37741,-15.65795 -5.29637,-33.87467 0.21921,-49.26655 16.74669,-46.73333 70.73005,-59.26975 102.8505,-23.88473 24.66501,27.17176 24.94765,70.17092 0.63584,96.73464 -12.51012,13.66883 -25.67353,20.09739 -42.54023,20.77514 -6.15686,0.24741 -12.10627,-0.16487 -15.8226,-1.09646 z M 234.42415,650.29732 c -39.56312,-9.49658 -60.99535,-57.38814 -43.53921,-97.29067 1.82821,-4.17902 12.49458,-25.7966 23.70304,-48.03906 l 20.37905,-40.44085 -56.63096,-130.9022 -56.63103,-130.9022 -31.671944,-0.28523 -31.672019,-0.28524 0,-34.57794 0,-34.57795 51.548033,0 51.54795,0 14.8413,34.32267 14.84121,34.32266 237.65244,0.54051 237.65243,0.54052 4.93174,2.67677 c 14.14912,7.67967 21.42008,25.67309 16.6101,41.10489 -1.72288,5.52743 -106.82667,216.12576 -116.28495,233.00225 -7.97324,14.22664 -20.48723,25.3096 -34.46844,30.52681 l -7.89078,2.94451 -123.45333,0.29452 -123.45325,0.29452 -14.38884,28.66447 c -15.71828,31.31311 -16.57885,34.10372 -11.78986,38.23232 l 2.59891,2.24052 183.82081,0 183.82081,0 0,34.59292 0,34.59292 -193.07756,-0.086 c -155.59478,-0.0693 -194.22647,-0.36172 -198.99565,-1.5065 z" id="path3371" inkscape:connector-curvature="0" />
+										</svg>
+									</a>
+								</li>
+							</ul>
+							
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="product-wrap">
+						<div class="product-bg"><div class="product-bg-grad"></div></div>
+						<h4>APPLE</h4>
+							<img src="img/APPLE.png" alt="APPLE">
+							<p class="sale-text">OFFERTA LIMITATA -50%</p>
+							<p class="sale">&#36;8.50<sup>19.00&#36;</sup></p>
+							<ul id="quantity" >
+								<li class="list">
+									<a href="#slide" class="link-popap">3<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+									<ul class="spoiler">
+										<li><a href="#slide">1</a></li>
+										<li><a href="#slide">2</a></li>
+										<li><a href="#slide">3</a></li>
+										<li><a href="#slide">4</a></li>
+										<li><a href="#slide">5</a></li>
+										<li><a href="#slide">6</a></li>
+										<li><a href="#slide">7</a></li>
+										<li><a href="#slide">8</a></li>
+										<li><a href="#slide">9</a></li>
+										<li><a href="#slide">10</a></li>
+										<li><a href="#slide">11</a></li>
+										<li><a href="#slide">12</a></li>
+										<li><a href="#slide">13</a></li>
+										<li><a href="#slide">14</a></li>
+										<li><a href="#slide">15</a></li>
+										<li><a href="#slide">16</a></li>
+										<li><a href="#slide">17</a></li>
+										<li><a href="#slide">18</a></li>
+										<li><a href="#slide">19</a></li>
+										<li><a href="#slide">20</a></li>
+										<li><a href="#slide">21</a></li>
+										<li><a href="#slide">22</a></li>
+										<li><a href="#slide">23</a></li>
+										<li><a href="#slide">24</a></li>
+										<li><a href="#slide">25</a></li>
+										<li><a href="#slide">26</a></li>
+										<li><a href="#slide">27</a></li>
+										<li><a href="#slide">28</a></li>
+										<li><a href="#slide">29</a></li>
+										<li><a href="#slide">30</a></li>
+										<li><a href="#slide">31</a></li>
+										<li><a href="#slide">32</a></li>
+										<li><a href="#slide">33</a></li>
+										<li><a href="#slide">34</a></li>
+										<li><a href="#slide">35</a></li>
+										<li><a href="#slide">36</a></li>
+										<li><a href="#slide">37</a></li>
+										<li><a href="#slide">38</a></li>
+										<li><a href="#slide">39</a></li>
+										<li><a href="#slide">40</a></li>
+										<li><a href="#slide">41</a></li>
+										<li><a href="#slide">42</a></li>
+										<li><a href="#slide">43</a></li>
+										<li><a href="#slide">44</a></li>
+										<li><a href="#slide">45</a></li>
+										<li><a href="#slide">46</a></li>
+										<li><a href="#slide">47</a></li>
+										<li><a href="#slide">48</a></li>
+										<li><a href="#slide">49</a></li>
+										<li><a href="#slide">50</a></li>
+									</ul>
+								</li>
+								<li class="link">
+									<a href="#popap" class="link-click">
+										<svg width="50px" height="50px" viewBox="0 0 744.09448819 1052.3622047" id="svg2" version="1.1">
+											<path d="m 234.38651,823.33344 c -20.56378,-5.15484 -37.95364,-21.74679 -45.34273,-43.26204 -5.37741,-15.65795 -5.29637,-33.87467 0.21929,-49.26655 16.7466,-46.73333 70.72997,-59.26975 102.85042,-23.88473 24.66501,27.17176 24.94766,70.17092 0.63584,96.73464 -12.51004,13.66883 -25.67352,20.09739 -42.54023,20.77514 -6.15686,0.24741 -12.10627,-0.16487 -15.82259,-1.09646 z m 315.63126,0 C 529.454,818.1786 512.06414,801.58665 504.67505,780.0714 c -5.37741,-15.65795 -5.29637,-33.87467 0.21921,-49.26655 16.74669,-46.73333 70.73005,-59.26975 102.8505,-23.88473 24.66501,27.17176 24.94765,70.17092 0.63584,96.73464 -12.51012,13.66883 -25.67353,20.09739 -42.54023,20.77514 -6.15686,0.24741 -12.10627,-0.16487 -15.8226,-1.09646 z M 234.42415,650.29732 c -39.56312,-9.49658 -60.99535,-57.38814 -43.53921,-97.29067 1.82821,-4.17902 12.49458,-25.7966 23.70304,-48.03906 l 20.37905,-40.44085 -56.63096,-130.9022 -56.63103,-130.9022 -31.671944,-0.28523 -31.672019,-0.28524 0,-34.57794 0,-34.57795 51.548033,0 51.54795,0 14.8413,34.32267 14.84121,34.32266 237.65244,0.54051 237.65243,0.54052 4.93174,2.67677 c 14.14912,7.67967 21.42008,25.67309 16.6101,41.10489 -1.72288,5.52743 -106.82667,216.12576 -116.28495,233.00225 -7.97324,14.22664 -20.48723,25.3096 -34.46844,30.52681 l -7.89078,2.94451 -123.45333,0.29452 -123.45325,0.29452 -14.38884,28.66447 c -15.71828,31.31311 -16.57885,34.10372 -11.78986,38.23232 l 2.59891,2.24052 183.82081,0 183.82081,0 0,34.59292 0,34.59292 -193.07756,-0.086 c -155.59478,-0.0693 -194.22647,-0.36172 -198.99565,-1.5065 z" id="path3371" inkscape:connector-curvature="0" />
+										</svg>
+									</a>
+								</li>
+							</ul>
+							
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="popap-oder" id="popap">
+			<div class="head-popap">
+				<h1 class="popap-titel"><i class="fa fa-angle-right" aria-hidden="true"></i>Carello</h1>
+			</div>
+			<div class="popap-prodact-wrap">
+				<div class="popap-prodact">
+					<div class="popap-prodact-item">
+						<img src="img/prodact.png" alt="prodact" class="prodact">
+						<p>offerta</p>
+						<p>fizzyslim con sapore di </p>
+						<p>ananas</p>
+						<p class="prodact-item">qta: 3 </p>
+						<p class="prodact-price">&euro;25.50</p>
+					</div>
+					<div class="popap-prodact-item">
+						<img src="img/prodact.png" alt="prodact" class="prodact">
+						<p>offerta</p>
+						<p>fizzyslim con sapore di </p>
+						<p>ananas</p>
+						<p class="prodact-item">qta: 3 </p>
+						<p class="prodact-price">&euro;25.50</p>
+					</div>
+					<div class="popap-prodact-item">
+						<img src="img/prodact.png" alt="prodact" class="prodact">
+						<p>offerta</p>
+						<p>fizzyslim con sapore di </p>
+						<p>ananas</p>
+						<p class="prodact-item">qta: 3 </p>
+						<p class="prodact-price">&euro;25.50</p>
+					</div>
+					<div class="subtotale">
+						<p>Subtotale</p>
+						<p class="totale-prise">&euro;455.00</p>
+					</div>
+				</div>
+				<div class="popapButton-wrap">
+					<button class="popap-button" ><a href="#">VISUALIZZA CARRELLO</a></button>	
+				</div>
+			</div>   
+		</div>    
+	</header>
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+	<script>
+	
+		var ms=document.createElement("link");ms.rel="stylesheet";
+		ms.href="_main.min.css";document.getElementsByTagName("head")[0].appendChild(ms);
+		var ms=document.createElement("link");ms.rel="stylesheet";
+		ms.href="_fonts.min.css";document.getElementsByTagName("head")[0].appendChild(ms);
+		var ms=document.createElement("link");ms.rel="stylesheet";
+		ms.href="libs/font-awesome/css/font-awesome.min.css";document.getElementsByTagName("head")[0].appendChild(ms);
+	</script>
+<!-- Load Scripts -->
+	<script src="libs/jquery/jquery-1.11.2.min.js"></script>
+	<script src="js/common.js"></script>
+
+</body>
+</html>
